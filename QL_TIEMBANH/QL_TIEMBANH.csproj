@@ -48,20 +48,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connected Services\KhachHang\Reference.cs">
+    <Compile Include="Connected Services\Services\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Connected Services\NhanVien\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <Compile Include="Frm_KhachHang.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Connected Services\SanPham\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <Compile Include="Frm_KhachHang.Designer.cs">
+      <DependentUpon>Frm_KhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_NhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_NhanVien.Designer.cs">
+      <DependentUpon>Frm_NhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_SanPham.cs">
       <SubType>Form</SubType>
@@ -71,6 +73,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Frm_KhachHang.resx">
+      <DependentUpon>Frm_KhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_NhanVien.resx">
+      <DependentUpon>Frm_NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_SanPham.resx">
       <DependentUpon>Frm_SanPham.cs</DependentUpon>
     </EmbeddedResource>
@@ -84,34 +92,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="Connected Services\KhachHang\service.wsdl" />
-    <None Include="Connected Services\KhachHang\service.xsd">
+    <None Include="Connected Services\Services\service.wsdl" />
+    <None Include="Connected Services\Services\service.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\KhachHang\service1.xsd">
+    <None Include="Connected Services\Services\service1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\KhachHang\System.Data.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\NhanVien\service.wsdl" />
-    <None Include="Connected Services\NhanVien\service.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\NhanVien\service1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\NhanVien\System.Data.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\SanPham\service.wsdl" />
-    <None Include="Connected Services\SanPham\service.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\SanPham\service1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\SanPham\System.Data.xsd">
+    <None Include="Connected Services\Services\System.Data.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
@@ -130,47 +118,6 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\KhachHang\" />
-    <WCFMetadataStorage Include="Connected Services\NhanVien\" />
-    <WCFMetadataStorage Include="Connected Services\SanPham\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\SanPham\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\SanPham\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\SanPham\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\NhanVien\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\NhanVien\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\NhanVien\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\KhachHang\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\KhachHang\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\KhachHang\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\add16x16.png" />
@@ -234,6 +181,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\search.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Services\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Services\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Services\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

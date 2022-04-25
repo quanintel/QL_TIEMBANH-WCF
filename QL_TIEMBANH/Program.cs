@@ -16,7 +16,7 @@ namespace QL_TIEMBANH
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frm_SanPham());
+            Application.Run(new Frm_NhanVien());
         }
     }
 }

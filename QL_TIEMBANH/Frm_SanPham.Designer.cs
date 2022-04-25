@@ -316,6 +316,7 @@
             this.btn_timkiem.TabIndex = 2;
             this.btn_timkiem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_timkiem.UseVisualStyleBackColor = true;
+            this.btn_timkiem.Click += new System.EventHandler(this.btn_timkiem_Click);
             // 
             // tb_sanpham
             // 

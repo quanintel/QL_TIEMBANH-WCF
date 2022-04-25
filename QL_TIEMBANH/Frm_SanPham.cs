@@ -16,11 +16,11 @@ namespace QL_TIEMBANH
         {
             InitializeComponent();
         }
-        SanPham.SanPhamClient sp = new SanPham.SanPhamClient();
+        Services.ServicesClient sv = new Services.ServicesClient();
         private void LoadDataGV()
         {
             DataTable data = new DataTable();
-            data = sp.showGV();
+            data = sv.showGVSanPham();
             tb_sanpham.DataSource = data;
         }
         private void Reset()
@@ -29,6 +29,7 @@ namespace QL_TIEMBANH
             txt_tensp.Clear();
             txt_soluong.Value = 0;
             txt_giaban.Value = 0;
+            txt_ngaynhap.Value = DateTime.Now;
             txt_anh.Clear();
             viewAnh.Image = null;
             txt_ghichu.Clear();
@@ -84,7 +85,7 @@ namespace QL_TIEMBANH
             {
                 try
                 {
-                    sp.InsertSanPham(txt_tensp.Text, (int)txt_soluong.Value, (float)txt_giaban.Value, txt_ngaynhap.Value, txt_anh.Text, txt_ghichu.Text);
+                    sv.InsertSanPham(txt_tensp.Text, (int)txt_soluong.Value, (float)txt_giaban.Value, txt_ngaynhap.Value, txt_anh.Text, txt_ghichu.Text);
                     MessageBox.Show("Thêm thành công !");
                     LoadDataGV();
                     Reset();
@@ -146,7 +147,7 @@ namespace QL_TIEMBANH
             {
                 try
                 {
-                    sp.UpdateSanPham(Convert.ToInt32(txt_masp.Text), txt_tensp.Text, (int)txt_soluong.Value, (float)txt_giaban.Value, txt_ngaynhap.Value, txt_anh.Text, txt_ghichu.Text);
+                    sv.UpdateSanPham(Convert.ToInt32(txt_masp.Text), txt_tensp.Text, (int)txt_soluong.Value, (float)txt_giaban.Value, txt_ngaynhap.Value, txt_anh.Text, txt_ghichu.Text);
                     MessageBox.Show("Sửa thành công !");
                     LoadDataGV();
                     ResetButton();
@@ -165,7 +166,7 @@ namespace QL_TIEMBANH
             {
                 if (MessageBox.Show("Bạn có muốn xoá không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    sp.DelSanPham(Convert.ToInt32(txt_masp.Text));
+                    sv.DelSanPham(Convert.ToInt32(txt_masp.Text));
                     LoadDataGV();
                     ResetButton();
                     Reset();
@@ -176,7 +177,12 @@ namespace QL_TIEMBANH
                 MessageBox.Show("Lỗi: " + ex);
             }
         }
-
+        private void btn_timkiem_Click(object sender, EventArgs e)
+        {
+            DataTable data = new DataTable();
+            data = sv.SearchSanPham(txt_timkiem.Text);
+            tb_sanpham.DataSource = data;
+        }
         private void btn_reset_Click(object sender, EventArgs e)
         {
             ResetButton();
