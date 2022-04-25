@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="InsertSanPham">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tensp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="soluong" type="xs:int" />
+        <xs:element minOccurs="0" name="giaban" type="xs:float" />
+        <xs:element minOccurs="0" name="ngaynhap" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="anh" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ghichu" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertSanPhamResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="showGV">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="showGVResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="showGVResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSanPham">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="masp" type="xs:int" />
+        <xs:element minOccurs="0" name="tensp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="soluong" type="xs:int" />
+        <xs:element minOccurs="0" name="giaban" type="xs:float" />
+        <xs:element minOccurs="0" name="ngaynhap" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="anh" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ghichu" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSanPhamResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DelSanPham">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="masp" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DelSanPhamResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchSanPham">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tensp" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchSanPhamResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SearchSanPhamResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
