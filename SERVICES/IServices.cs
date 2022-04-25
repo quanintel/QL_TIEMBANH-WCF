@@ -23,6 +23,8 @@ namespace SERVICES
         void DelSanPham(int masp);
         [OperationContract]
         DataTable SearchSanPham(string tensp);
+        [OperationContract]
+        DataTable showComboxSanPham();
         /*Nhân Viên*/
         [OperationContract]
         void InsertNhanVien(string tennv, string gioitinh, string dienthoai, DateTime ngaysinh, string diachi);
@@ -34,6 +36,8 @@ namespace SERVICES
         void DelNhanVien(int manv);
         [OperationContract]
         DataTable SearchNhanVien(string tennv);
+        [OperationContract]
+        DataTable showComboxNhanVien();
         /*Khách Hàng*/
         [OperationContract]
         void InsertKhachHang(string tenkh, string diachi, string dienthoai);
@@ -45,5 +49,34 @@ namespace SERVICES
         void DelKhachHang(int makh);
         [OperationContract]
         DataTable SearchKhachHang(string tenkh);
+        [OperationContract]
+        DataTable showComboxKhachHang();
+        /*Hoá Đơn*/
+        [OperationContract]
+        void InsertHoaDon(int manv, int makh, DateTime ngayban, float tongtien);
+        [OperationContract]
+        DataTable showGVHoaDon();
+        [OperationContract]
+        DataTable showGVHoaDonChiTiet(int mahd);
+        [OperationContract]
+        string getGiaTien(int masp);
+        [OperationContract]
+        string getSoLuong(int masp);
+        [OperationContract]
+        string getTongTien(int mahd);
+        [OperationContract]
+        DataTable getThongTinHD(int mahd);
+        [OperationContract]
+        DataTable getThongTinSP(int mahd);
+        [OperationContract]
+        bool checkSanPham(int mahd, int masp);
+        [OperationContract]
+        void InsertChiTietHoaDon(int mahd, int masp, int sl, float giaban, float thanhtien);
+        [OperationContract]
+        void UpdateSoLuong(int masp, double sl);
+        [OperationContract]
+        void UpdateTongTien(int mahd, double tongtien);
+        [OperationContract]
+        void DelOne_ChiTietHoaDon(int macthd);
     }
 }

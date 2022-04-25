@@ -32,5 +32,31 @@ namespace SERVICES
             adapter.Fill(table);
             return table.Tables[0];
         }
+        public string GetFieldValues(string sql)
+        {
+            string id = "";
+            SqlConnection con = Connection();
+            con.Open();
+            SqlDataReader reader;
+            SqlCommand cmd = new SqlCommand(sql, con);
+            reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                id = reader.GetValue(0).ToString();
+            }
+            reader.Close();
+            return id;
+        }
+        public bool CheckKey(string sql)
+        {
+            SqlConnection con = Connection();
+            con.Open();
+            SqlDataAdapter dap = new SqlDataAdapter(sql, con);
+            DataTable table = new DataTable();
+            dap.Fill(table);
+            if (table.Rows.Count > 0)
+                return true;
+            else return false;
+        }
     }
 }

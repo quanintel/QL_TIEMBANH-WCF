@@ -45,6 +45,12 @@ namespace QL_TIEMBANH.Services {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServices/SearchSanPham", ReplyAction="http://tempuri.org/IServices/SearchSanPhamResponse")]
         System.Threading.Tasks.Task<System.Data.DataTable> SearchSanPhamAsync(string tensp);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServices/showComboxSanPham", ReplyAction="http://tempuri.org/IServices/showComboxSanPhamResponse")]
+        System.Data.DataTable showComboxSanPham();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServices/showComboxSanPham", ReplyAction="http://tempuri.org/IServices/showComboxSanPhamResponse")]
+        System.Threading.Tasks.Task<System.Data.DataTable> showComboxSanPhamAsync();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServices/InsertNhanVien", ReplyAction="http://tempuri.org/IServices/InsertNhanVienResponse")]
         void InsertNhanVien(string tennv, string gioitinh, string dienthoai, System.DateTime ngaysinh, string diachi);
         
@@ -75,6 +81,12 @@ namespace QL_TIEMBANH.Services {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServices/SearchNhanVien", ReplyAction="http://tempuri.org/IServices/SearchNhanVienResponse")]
         System.Threading.Tasks.Task<System.Data.DataTable> SearchNhanVienAsync(string tennv);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServices/showComboxNhanVien", ReplyAction="http://tempuri.org/IServices/showComboxNhanVienResponse")]
+        System.Data.DataTable showComboxNhanVien();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServices/showComboxNhanVien", ReplyAction="http://tempuri.org/IServices/showComboxNhanVienResponse")]
+        System.Threading.Tasks.Task<System.Data.DataTable> showComboxNhanVienAsync();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServices/InsertKhachHang", ReplyAction="http://tempuri.org/IServices/InsertKhachHangResponse")]
         void InsertKhachHang(string tenkh, string diachi, string dienthoai);
         
@@ -104,6 +116,90 @@ namespace QL_TIEMBANH.Services {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServices/SearchKhachHang", ReplyAction="http://tempuri.org/IServices/SearchKhachHangResponse")]
         System.Threading.Tasks.Task<System.Data.DataTable> SearchKhachHangAsync(string tenkh);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServices/showComboxKhachHang", ReplyAction="http://tempuri.org/IServices/showComboxKhachHangResponse")]
+        System.Data.DataTable showComboxKhachHang();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServices/showComboxKhachHang", ReplyAction="http://tempuri.org/IServices/showComboxKhachHangResponse")]
+        System.Threading.Tasks.Task<System.Data.DataTable> showComboxKhachHangAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServices/InsertHoaDon", ReplyAction="http://tempuri.org/IServices/InsertHoaDonResponse")]
+        void InsertHoaDon(int manv, int makh, System.DateTime ngayban, float tongtien);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServices/InsertHoaDon", ReplyAction="http://tempuri.org/IServices/InsertHoaDonResponse")]
+        System.Threading.Tasks.Task InsertHoaDonAsync(int manv, int makh, System.DateTime ngayban, float tongtien);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServices/showGVHoaDon", ReplyAction="http://tempuri.org/IServices/showGVHoaDonResponse")]
+        System.Data.DataTable showGVHoaDon();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServices/showGVHoaDon", ReplyAction="http://tempuri.org/IServices/showGVHoaDonResponse")]
+        System.Threading.Tasks.Task<System.Data.DataTable> showGVHoaDonAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServices/showGVHoaDonChiTiet", ReplyAction="http://tempuri.org/IServices/showGVHoaDonChiTietResponse")]
+        System.Data.DataTable showGVHoaDonChiTiet(int mahd);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServices/showGVHoaDonChiTiet", ReplyAction="http://tempuri.org/IServices/showGVHoaDonChiTietResponse")]
+        System.Threading.Tasks.Task<System.Data.DataTable> showGVHoaDonChiTietAsync(int mahd);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServices/getGiaTien", ReplyAction="http://tempuri.org/IServices/getGiaTienResponse")]
+        string getGiaTien(int masp);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServices/getGiaTien", ReplyAction="http://tempuri.org/IServices/getGiaTienResponse")]
+        System.Threading.Tasks.Task<string> getGiaTienAsync(int masp);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServices/getSoLuong", ReplyAction="http://tempuri.org/IServices/getSoLuongResponse")]
+        string getSoLuong(int masp);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServices/getSoLuong", ReplyAction="http://tempuri.org/IServices/getSoLuongResponse")]
+        System.Threading.Tasks.Task<string> getSoLuongAsync(int masp);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServices/getTongTien", ReplyAction="http://tempuri.org/IServices/getTongTienResponse")]
+        string getTongTien(int mahd);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServices/getTongTien", ReplyAction="http://tempuri.org/IServices/getTongTienResponse")]
+        System.Threading.Tasks.Task<string> getTongTienAsync(int mahd);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServices/getThongTinHD", ReplyAction="http://tempuri.org/IServices/getThongTinHDResponse")]
+        System.Data.DataTable getThongTinHD(int mahd);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServices/getThongTinHD", ReplyAction="http://tempuri.org/IServices/getThongTinHDResponse")]
+        System.Threading.Tasks.Task<System.Data.DataTable> getThongTinHDAsync(int mahd);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServices/getThongTinSP", ReplyAction="http://tempuri.org/IServices/getThongTinSPResponse")]
+        System.Data.DataTable getThongTinSP(int mahd);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServices/getThongTinSP", ReplyAction="http://tempuri.org/IServices/getThongTinSPResponse")]
+        System.Threading.Tasks.Task<System.Data.DataTable> getThongTinSPAsync(int mahd);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServices/checkSanPham", ReplyAction="http://tempuri.org/IServices/checkSanPhamResponse")]
+        bool checkSanPham(int mahd, int masp);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServices/checkSanPham", ReplyAction="http://tempuri.org/IServices/checkSanPhamResponse")]
+        System.Threading.Tasks.Task<bool> checkSanPhamAsync(int mahd, int masp);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServices/InsertChiTietHoaDon", ReplyAction="http://tempuri.org/IServices/InsertChiTietHoaDonResponse")]
+        void InsertChiTietHoaDon(int mahd, int masp, int sl, float giaban, float thanhtien);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServices/InsertChiTietHoaDon", ReplyAction="http://tempuri.org/IServices/InsertChiTietHoaDonResponse")]
+        System.Threading.Tasks.Task InsertChiTietHoaDonAsync(int mahd, int masp, int sl, float giaban, float thanhtien);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServices/UpdateSoLuong", ReplyAction="http://tempuri.org/IServices/UpdateSoLuongResponse")]
+        void UpdateSoLuong(int masp, double sl);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServices/UpdateSoLuong", ReplyAction="http://tempuri.org/IServices/UpdateSoLuongResponse")]
+        System.Threading.Tasks.Task UpdateSoLuongAsync(int masp, double sl);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServices/UpdateTongTien", ReplyAction="http://tempuri.org/IServices/UpdateTongTienResponse")]
+        void UpdateTongTien(int mahd, double tongtien);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServices/UpdateTongTien", ReplyAction="http://tempuri.org/IServices/UpdateTongTienResponse")]
+        System.Threading.Tasks.Task UpdateTongTienAsync(int mahd, double tongtien);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServices/DelOne_ChiTietHoaDon", ReplyAction="http://tempuri.org/IServices/DelOne_ChiTietHoaDonResponse")]
+        void DelOne_ChiTietHoaDon(int macthd);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServices/DelOne_ChiTietHoaDon", ReplyAction="http://tempuri.org/IServices/DelOne_ChiTietHoaDonResponse")]
+        System.Threading.Tasks.Task DelOne_ChiTietHoaDonAsync(int macthd);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -173,6 +269,14 @@ namespace QL_TIEMBANH.Services {
             return base.Channel.SearchSanPhamAsync(tensp);
         }
         
+        public System.Data.DataTable showComboxSanPham() {
+            return base.Channel.showComboxSanPham();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataTable> showComboxSanPhamAsync() {
+            return base.Channel.showComboxSanPhamAsync();
+        }
+        
         public void InsertNhanVien(string tennv, string gioitinh, string dienthoai, System.DateTime ngaysinh, string diachi) {
             base.Channel.InsertNhanVien(tennv, gioitinh, dienthoai, ngaysinh, diachi);
         }
@@ -213,6 +317,14 @@ namespace QL_TIEMBANH.Services {
             return base.Channel.SearchNhanVienAsync(tennv);
         }
         
+        public System.Data.DataTable showComboxNhanVien() {
+            return base.Channel.showComboxNhanVien();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataTable> showComboxNhanVienAsync() {
+            return base.Channel.showComboxNhanVienAsync();
+        }
+        
         public void InsertKhachHang(string tenkh, string diachi, string dienthoai) {
             base.Channel.InsertKhachHang(tenkh, diachi, dienthoai);
         }
@@ -251,6 +363,118 @@ namespace QL_TIEMBANH.Services {
         
         public System.Threading.Tasks.Task<System.Data.DataTable> SearchKhachHangAsync(string tenkh) {
             return base.Channel.SearchKhachHangAsync(tenkh);
+        }
+        
+        public System.Data.DataTable showComboxKhachHang() {
+            return base.Channel.showComboxKhachHang();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataTable> showComboxKhachHangAsync() {
+            return base.Channel.showComboxKhachHangAsync();
+        }
+        
+        public void InsertHoaDon(int manv, int makh, System.DateTime ngayban, float tongtien) {
+            base.Channel.InsertHoaDon(manv, makh, ngayban, tongtien);
+        }
+        
+        public System.Threading.Tasks.Task InsertHoaDonAsync(int manv, int makh, System.DateTime ngayban, float tongtien) {
+            return base.Channel.InsertHoaDonAsync(manv, makh, ngayban, tongtien);
+        }
+        
+        public System.Data.DataTable showGVHoaDon() {
+            return base.Channel.showGVHoaDon();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataTable> showGVHoaDonAsync() {
+            return base.Channel.showGVHoaDonAsync();
+        }
+        
+        public System.Data.DataTable showGVHoaDonChiTiet(int mahd) {
+            return base.Channel.showGVHoaDonChiTiet(mahd);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataTable> showGVHoaDonChiTietAsync(int mahd) {
+            return base.Channel.showGVHoaDonChiTietAsync(mahd);
+        }
+        
+        public string getGiaTien(int masp) {
+            return base.Channel.getGiaTien(masp);
+        }
+        
+        public System.Threading.Tasks.Task<string> getGiaTienAsync(int masp) {
+            return base.Channel.getGiaTienAsync(masp);
+        }
+        
+        public string getSoLuong(int masp) {
+            return base.Channel.getSoLuong(masp);
+        }
+        
+        public System.Threading.Tasks.Task<string> getSoLuongAsync(int masp) {
+            return base.Channel.getSoLuongAsync(masp);
+        }
+        
+        public string getTongTien(int mahd) {
+            return base.Channel.getTongTien(mahd);
+        }
+        
+        public System.Threading.Tasks.Task<string> getTongTienAsync(int mahd) {
+            return base.Channel.getTongTienAsync(mahd);
+        }
+        
+        public System.Data.DataTable getThongTinHD(int mahd) {
+            return base.Channel.getThongTinHD(mahd);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataTable> getThongTinHDAsync(int mahd) {
+            return base.Channel.getThongTinHDAsync(mahd);
+        }
+        
+        public System.Data.DataTable getThongTinSP(int mahd) {
+            return base.Channel.getThongTinSP(mahd);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataTable> getThongTinSPAsync(int mahd) {
+            return base.Channel.getThongTinSPAsync(mahd);
+        }
+        
+        public bool checkSanPham(int mahd, int masp) {
+            return base.Channel.checkSanPham(mahd, masp);
+        }
+        
+        public System.Threading.Tasks.Task<bool> checkSanPhamAsync(int mahd, int masp) {
+            return base.Channel.checkSanPhamAsync(mahd, masp);
+        }
+        
+        public void InsertChiTietHoaDon(int mahd, int masp, int sl, float giaban, float thanhtien) {
+            base.Channel.InsertChiTietHoaDon(mahd, masp, sl, giaban, thanhtien);
+        }
+        
+        public System.Threading.Tasks.Task InsertChiTietHoaDonAsync(int mahd, int masp, int sl, float giaban, float thanhtien) {
+            return base.Channel.InsertChiTietHoaDonAsync(mahd, masp, sl, giaban, thanhtien);
+        }
+        
+        public void UpdateSoLuong(int masp, double sl) {
+            base.Channel.UpdateSoLuong(masp, sl);
+        }
+        
+        public System.Threading.Tasks.Task UpdateSoLuongAsync(int masp, double sl) {
+            return base.Channel.UpdateSoLuongAsync(masp, sl);
+        }
+        
+        public void UpdateTongTien(int mahd, double tongtien) {
+            base.Channel.UpdateTongTien(mahd, tongtien);
+        }
+        
+        public System.Threading.Tasks.Task UpdateTongTienAsync(int mahd, double tongtien) {
+            return base.Channel.UpdateTongTienAsync(mahd, tongtien);
+        }
+        
+        public void DelOne_ChiTietHoaDon(int macthd) {
+            base.Channel.DelOne_ChiTietHoaDon(macthd);
+        }
+        
+        public System.Threading.Tasks.Task DelOne_ChiTietHoaDonAsync(int macthd) {
+            return base.Channel.DelOne_ChiTietHoaDonAsync(macthd);
         }
     }
 }

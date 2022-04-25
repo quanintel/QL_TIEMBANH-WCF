@@ -115,5 +115,124 @@ namespace SERVICES
             string sql_edit = "UPDATE KHACHHANG SET TENKH=N'" + tenkh + "', DIACHI=N'" + diachi + "', DIENTHOAI=N'" + dienthoai + "' WHERE MAKH=" + makh + "";
             connect.ExcuteNonQuery(sql_edit);
         }
+
+        public void InsertHoaDon(int manv, int makh, DateTime ngayban, float tongtien)
+        {
+            string sql_add = "INSERT INTO HOADONBAN VALUES(" + manv + ", " + makh + ", '" + ngayban.ToString("yyyy-MM-dd") + "', " + tongtien + ")";
+            connect.ExcuteNonQuery(sql_add);
+        }
+
+        public DataTable showComboxSanPham()
+        {
+            string sql = "SELECT MASP, TENSP FROM SANPHAM";
+            DataTable dataTable = new DataTable();
+            dataTable = connect.getTable(sql);
+            return dataTable;
+        }
+
+        public DataTable showComboxNhanVien()
+        {
+            string sql = "SELECT MANV, TENNV FROM NHANVIEN";
+            DataTable dataTable = new DataTable();
+            dataTable = connect.getTable(sql);
+            return dataTable;
+        }
+
+        public DataTable showComboxKhachHang()
+        {
+            string sql = "SELECT MAKH, TENKH FROM KHACHHANG";
+            DataTable dataTable = new DataTable();
+            dataTable = connect.getTable(sql);
+            return dataTable;
+        }
+
+        public DataTable showGVHoaDon()
+        {
+            string sql = "SELECT * FROM HOADONBAN";
+            DataTable dataTable = new DataTable();
+            dataTable = connect.getTable(sql);
+            return dataTable;
+        }
+
+        public DataTable showGVHoaDonChiTiet(int mahd)
+        {
+            string sql =
+                "SELECT CHITIETHOADON.ID ,CHITIETHOADON.MASP, SANPHAM.TENSP, CHITIETHOADON.SL, SANPHAM.GIABAN, CHITIETHOADON.THANHTIEN " +
+                "FROM CHITIETHOADON " +
+                "INNER JOIN HOADONBAN ON CHITIETHOADON.MAHD=HOADONBAN.MAHD " +
+                "INNER JOIN SANPHAM ON SANPHAM.MASP=CHITIETHOADON.MASP " +
+                "WHERE CHITIETHOADON.MAHD = HOADONBAN.MAHD AND CHITIETHOADON.MAHD = " + mahd + "";
+            DataTable dataTable = new DataTable();
+            dataTable = connect.getTable(sql);
+            return dataTable;
+        }
+
+        public string getGiaTien(int masp)
+        {
+            string sql = "SELECT GIABAN FROM SANPHAM WHERE MASP='" + masp + "'";
+            return connect.GetFieldValues(sql);
+        }
+        public string getSoLuong(int masp)
+        {
+            string sql = "SELECT SL FROM SANPHAM WHERE MASP='" + masp + "'";
+            return connect.GetFieldValues(sql);
+        }
+        public string getTongTien(int mahd)
+        {
+            string sql = "SELECT TONGTIEN FROM HOADONBAN WHERE MAHD = " + mahd + "";
+            return connect.GetFieldValues(sql);
+        }
+        public bool checkSanPham(int mahd, int masp)
+        {
+            string sql = "SELECT SANPHAM.TENSP FROM CHITIETHOADON INNER JOIN HOADONBAN ON CHITIETHOADON.MAHD=HOADONBAN.MAHD INNER JOIN SANPHAM ON SANPHAM.MASP=CHITIETHOADON.MASP WHERE CHITIETHOADON.MAHD = '" + mahd + "' AND CHITIETHOADON.MASP = '" + masp + "'";
+            return connect.CheckKey(sql);
+        }
+        public void InsertChiTietHoaDon(int mahd, int masp, int sl, float giaban, float thanhtien)
+        {
+            string sql_add = "INSERT INTO CHITIETHOADON VALUES(" + mahd + ", " + masp + ", " + sl + ", " + giaban + ", " + thanhtien + ")";
+            connect.ExcuteNonQuery(sql_add);
+        }
+        public void UpdateSoLuong(int masp, double sl)
+        {
+            string sql_edit = "UPDATE SANPHAM SET SL=" + sl + " WHERE MASP=" + masp + "";
+            connect.ExcuteNonQuery(sql_edit);
+        }
+
+        public void UpdateTongTien(int mahd, double tongtien)
+        {
+            string sql_edit = "UPDATE HOADONBAN SET TONGTIEN =" + tongtien + " WHERE MAHD = " + mahd + "";
+            connect.ExcuteNonQuery(sql_edit);
+        }
+
+        public void DelOne_ChiTietHoaDon(int macthd)
+        {
+            string sql_del = "DELETE CHITIETHOADON WHERE ID=" + macthd + "";
+            connect.ExcuteNonQuery(sql_del);
+        }
+
+        public DataTable getThongTinHD(int mahd)
+        {
+            string sql =
+                "SELECT HOADONBAN.MAHD,HOADONBAN.NGAYBAN,HOADONBAN.TONGTIEN,KHACHHANG.TENKH,KHACHHANG.DIACHI,KHACHHANG.DIENTHOAI,NHANVIEN.TENNV " +
+                "FROM HOADONBAN " +
+                "INNER JOIN NHANVIEN ON NHANVIEN.MANV=HOADONBAN.MANV " +
+                "INNER JOIN KHACHHANG ON KHACHHANG.MAKH=HOADONBAN.MAKH " +
+                "WHERE HOADONBAN.MAHD = " + mahd + "";
+            DataTable dataTable = new DataTable();
+            dataTable = connect.getTable(sql);
+            return dataTable;
+        }
+
+        public DataTable getThongTinSP(int mahd)
+        {
+            string sql =
+                "SELECT SANPHAM.TENSP, CHITIETHOADON.SL, SANPHAM.GIABAN, CHITIETHOADON.THANHTIEN " +
+                "FROM CHITIETHOADON INNER JOIN HOADONBAN ON CHITIETHOADON.MAHD=HOADONBAN.MAHD " +
+                "INNER JOIN SANPHAM ON SANPHAM.MASP=CHITIETHOADON.MASP " +
+                "WHERE CHITIETHOADON.MAHD = HOADONBAN.MAHD AND CHITIETHOADON.MAHD = " + mahd + "";
+            DataTable dataTable = new DataTable();
+            dataTable = connect.getTable(sql);
+            return dataTable;
+        }
     }
 }

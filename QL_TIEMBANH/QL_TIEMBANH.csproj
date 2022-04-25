@@ -53,6 +53,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Frm_HoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_HoaDon.Designer.cs">
+      <DependentUpon>Frm_HoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_KhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,8 +77,17 @@
     <Compile Include="Frm_SanPham.Designer.cs">
       <DependentUpon>Frm_SanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_TrangChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_TrangChu.Designer.cs">
+      <DependentUpon>Frm_TrangChu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Frm_HoaDon.resx">
+      <DependentUpon>Frm_HoaDon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_KhachHang.resx">
       <DependentUpon>Frm_KhachHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -81,6 +96,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_SanPham.resx">
       <DependentUpon>Frm_SanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_TrangChu.resx">
+      <DependentUpon>Frm_TrangChu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -196,6 +214,35 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

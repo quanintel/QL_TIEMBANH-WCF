@@ -164,7 +164,5 @@ namespace QL_TIEMBANH
             ResetButton();
             Reset();
         }
-
-       
     }
 }

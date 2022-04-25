@@ -37,6 +37,12 @@
   <wsdl:message name="IServices_SearchSanPham_OutputMessage">
     <wsdl:part name="parameters" element="tns:SearchSanPhamResponse" />
   </wsdl:message>
+  <wsdl:message name="IServices_showComboxSanPham_InputMessage">
+    <wsdl:part name="parameters" element="tns:showComboxSanPham" />
+  </wsdl:message>
+  <wsdl:message name="IServices_showComboxSanPham_OutputMessage">
+    <wsdl:part name="parameters" element="tns:showComboxSanPhamResponse" />
+  </wsdl:message>
   <wsdl:message name="IServices_InsertNhanVien_InputMessage">
     <wsdl:part name="parameters" element="tns:InsertNhanVien" />
   </wsdl:message>
@@ -66,6 +72,12 @@
   </wsdl:message>
   <wsdl:message name="IServices_SearchNhanVien_OutputMessage">
     <wsdl:part name="parameters" element="tns:SearchNhanVienResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServices_showComboxNhanVien_InputMessage">
+    <wsdl:part name="parameters" element="tns:showComboxNhanVien" />
+  </wsdl:message>
+  <wsdl:message name="IServices_showComboxNhanVien_OutputMessage">
+    <wsdl:part name="parameters" element="tns:showComboxNhanVienResponse" />
   </wsdl:message>
   <wsdl:message name="IServices_InsertKhachHang_InputMessage">
     <wsdl:part name="parameters" element="tns:InsertKhachHang" />
@@ -97,6 +109,90 @@
   <wsdl:message name="IServices_SearchKhachHang_OutputMessage">
     <wsdl:part name="parameters" element="tns:SearchKhachHangResponse" />
   </wsdl:message>
+  <wsdl:message name="IServices_showComboxKhachHang_InputMessage">
+    <wsdl:part name="parameters" element="tns:showComboxKhachHang" />
+  </wsdl:message>
+  <wsdl:message name="IServices_showComboxKhachHang_OutputMessage">
+    <wsdl:part name="parameters" element="tns:showComboxKhachHangResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServices_InsertHoaDon_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertHoaDon" />
+  </wsdl:message>
+  <wsdl:message name="IServices_InsertHoaDon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertHoaDonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServices_showGVHoaDon_InputMessage">
+    <wsdl:part name="parameters" element="tns:showGVHoaDon" />
+  </wsdl:message>
+  <wsdl:message name="IServices_showGVHoaDon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:showGVHoaDonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServices_showGVHoaDonChiTiet_InputMessage">
+    <wsdl:part name="parameters" element="tns:showGVHoaDonChiTiet" />
+  </wsdl:message>
+  <wsdl:message name="IServices_showGVHoaDonChiTiet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:showGVHoaDonChiTietResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServices_getGiaTien_InputMessage">
+    <wsdl:part name="parameters" element="tns:getGiaTien" />
+  </wsdl:message>
+  <wsdl:message name="IServices_getGiaTien_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getGiaTienResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServices_getSoLuong_InputMessage">
+    <wsdl:part name="parameters" element="tns:getSoLuong" />
+  </wsdl:message>
+  <wsdl:message name="IServices_getSoLuong_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getSoLuongResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServices_getTongTien_InputMessage">
+    <wsdl:part name="parameters" element="tns:getTongTien" />
+  </wsdl:message>
+  <wsdl:message name="IServices_getTongTien_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getTongTienResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServices_getThongTinHD_InputMessage">
+    <wsdl:part name="parameters" element="tns:getThongTinHD" />
+  </wsdl:message>
+  <wsdl:message name="IServices_getThongTinHD_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getThongTinHDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServices_getThongTinSP_InputMessage">
+    <wsdl:part name="parameters" element="tns:getThongTinSP" />
+  </wsdl:message>
+  <wsdl:message name="IServices_getThongTinSP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getThongTinSPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServices_checkSanPham_InputMessage">
+    <wsdl:part name="parameters" element="tns:checkSanPham" />
+  </wsdl:message>
+  <wsdl:message name="IServices_checkSanPham_OutputMessage">
+    <wsdl:part name="parameters" element="tns:checkSanPhamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServices_InsertChiTietHoaDon_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertChiTietHoaDon" />
+  </wsdl:message>
+  <wsdl:message name="IServices_InsertChiTietHoaDon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertChiTietHoaDonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServices_UpdateSoLuong_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSoLuong" />
+  </wsdl:message>
+  <wsdl:message name="IServices_UpdateSoLuong_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSoLuongResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServices_UpdateTongTien_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTongTien" />
+  </wsdl:message>
+  <wsdl:message name="IServices_UpdateTongTien_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTongTienResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServices_DelOne_ChiTietHoaDon_InputMessage">
+    <wsdl:part name="parameters" element="tns:DelOne_ChiTietHoaDon" />
+  </wsdl:message>
+  <wsdl:message name="IServices_DelOne_ChiTietHoaDon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DelOne_ChiTietHoaDonResponse" />
+  </wsdl:message>
   <wsdl:portType name="IServices">
     <wsdl:operation name="InsertSanPham">
       <wsdl:input wsaw:Action="http://tempuri.org/IServices/InsertSanPham" message="tns:IServices_InsertSanPham_InputMessage" />
@@ -118,6 +214,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IServices/SearchSanPham" message="tns:IServices_SearchSanPham_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServices/SearchSanPhamResponse" message="tns:IServices_SearchSanPham_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="showComboxSanPham">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServices/showComboxSanPham" message="tns:IServices_showComboxSanPham_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServices/showComboxSanPhamResponse" message="tns:IServices_showComboxSanPham_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="InsertNhanVien">
       <wsdl:input wsaw:Action="http://tempuri.org/IServices/InsertNhanVien" message="tns:IServices_InsertNhanVien_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServices/InsertNhanVienResponse" message="tns:IServices_InsertNhanVien_OutputMessage" />
@@ -138,6 +238,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IServices/SearchNhanVien" message="tns:IServices_SearchNhanVien_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServices/SearchNhanVienResponse" message="tns:IServices_SearchNhanVien_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="showComboxNhanVien">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServices/showComboxNhanVien" message="tns:IServices_showComboxNhanVien_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServices/showComboxNhanVienResponse" message="tns:IServices_showComboxNhanVien_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="InsertKhachHang">
       <wsdl:input wsaw:Action="http://tempuri.org/IServices/InsertKhachHang" message="tns:IServices_InsertKhachHang_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServices/InsertKhachHangResponse" message="tns:IServices_InsertKhachHang_OutputMessage" />
@@ -157,6 +261,62 @@
     <wsdl:operation name="SearchKhachHang">
       <wsdl:input wsaw:Action="http://tempuri.org/IServices/SearchKhachHang" message="tns:IServices_SearchKhachHang_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServices/SearchKhachHangResponse" message="tns:IServices_SearchKhachHang_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="showComboxKhachHang">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServices/showComboxKhachHang" message="tns:IServices_showComboxKhachHang_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServices/showComboxKhachHangResponse" message="tns:IServices_showComboxKhachHang_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertHoaDon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServices/InsertHoaDon" message="tns:IServices_InsertHoaDon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServices/InsertHoaDonResponse" message="tns:IServices_InsertHoaDon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="showGVHoaDon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServices/showGVHoaDon" message="tns:IServices_showGVHoaDon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServices/showGVHoaDonResponse" message="tns:IServices_showGVHoaDon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="showGVHoaDonChiTiet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServices/showGVHoaDonChiTiet" message="tns:IServices_showGVHoaDonChiTiet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServices/showGVHoaDonChiTietResponse" message="tns:IServices_showGVHoaDonChiTiet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getGiaTien">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServices/getGiaTien" message="tns:IServices_getGiaTien_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServices/getGiaTienResponse" message="tns:IServices_getGiaTien_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getSoLuong">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServices/getSoLuong" message="tns:IServices_getSoLuong_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServices/getSoLuongResponse" message="tns:IServices_getSoLuong_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getTongTien">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServices/getTongTien" message="tns:IServices_getTongTien_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServices/getTongTienResponse" message="tns:IServices_getTongTien_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getThongTinHD">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServices/getThongTinHD" message="tns:IServices_getThongTinHD_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServices/getThongTinHDResponse" message="tns:IServices_getThongTinHD_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getThongTinSP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServices/getThongTinSP" message="tns:IServices_getThongTinSP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServices/getThongTinSPResponse" message="tns:IServices_getThongTinSP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkSanPham">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServices/checkSanPham" message="tns:IServices_checkSanPham_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServices/checkSanPhamResponse" message="tns:IServices_checkSanPham_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertChiTietHoaDon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServices/InsertChiTietHoaDon" message="tns:IServices_InsertChiTietHoaDon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServices/InsertChiTietHoaDonResponse" message="tns:IServices_InsertChiTietHoaDon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSoLuong">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServices/UpdateSoLuong" message="tns:IServices_UpdateSoLuong_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServices/UpdateSoLuongResponse" message="tns:IServices_UpdateSoLuong_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTongTien">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServices/UpdateTongTien" message="tns:IServices_UpdateTongTien_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServices/UpdateTongTienResponse" message="tns:IServices_UpdateTongTien_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DelOne_ChiTietHoaDon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServices/DelOne_ChiTietHoaDon" message="tns:IServices_DelOne_ChiTietHoaDon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServices/DelOne_ChiTietHoaDonResponse" message="tns:IServices_DelOne_ChiTietHoaDon_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IServices" type="tns:IServices">
@@ -199,6 +359,15 @@
     </wsdl:operation>
     <wsdl:operation name="SearchSanPham">
       <soap:operation soapAction="http://tempuri.org/IServices/SearchSanPham" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="showComboxSanPham">
+      <soap:operation soapAction="http://tempuri.org/IServices/showComboxSanPham" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -251,6 +420,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="showComboxNhanVien">
+      <soap:operation soapAction="http://tempuri.org/IServices/showComboxNhanVien" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="InsertKhachHang">
       <soap:operation soapAction="http://tempuri.org/IServices/InsertKhachHang" style="document" />
       <wsdl:input>
@@ -289,6 +467,132 @@
     </wsdl:operation>
     <wsdl:operation name="SearchKhachHang">
       <soap:operation soapAction="http://tempuri.org/IServices/SearchKhachHang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="showComboxKhachHang">
+      <soap:operation soapAction="http://tempuri.org/IServices/showComboxKhachHang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertHoaDon">
+      <soap:operation soapAction="http://tempuri.org/IServices/InsertHoaDon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="showGVHoaDon">
+      <soap:operation soapAction="http://tempuri.org/IServices/showGVHoaDon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="showGVHoaDonChiTiet">
+      <soap:operation soapAction="http://tempuri.org/IServices/showGVHoaDonChiTiet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getGiaTien">
+      <soap:operation soapAction="http://tempuri.org/IServices/getGiaTien" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSoLuong">
+      <soap:operation soapAction="http://tempuri.org/IServices/getSoLuong" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTongTien">
+      <soap:operation soapAction="http://tempuri.org/IServices/getTongTien" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getThongTinHD">
+      <soap:operation soapAction="http://tempuri.org/IServices/getThongTinHD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getThongTinSP">
+      <soap:operation soapAction="http://tempuri.org/IServices/getThongTinSP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkSanPham">
+      <soap:operation soapAction="http://tempuri.org/IServices/checkSanPham" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertChiTietHoaDon">
+      <soap:operation soapAction="http://tempuri.org/IServices/InsertChiTietHoaDon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSoLuong">
+      <soap:operation soapAction="http://tempuri.org/IServices/UpdateSoLuong" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTongTien">
+      <soap:operation soapAction="http://tempuri.org/IServices/UpdateTongTien" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelOne_ChiTietHoaDon">
+      <soap:operation soapAction="http://tempuri.org/IServices/DelOne_ChiTietHoaDon" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
